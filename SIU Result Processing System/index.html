@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Processing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcomeScreen">
+        <h1>Welcome to the Result Processing System</h1>
+        <img src="university-logo.png" alt="University Logo" id="logo">
+        <button id="okButton">OK</button>
+    </div>
+
+    <div id="options" class="hidden">
+        <h2>Select Details</h2>
+        <div class="form-group">
+            <label for="session">Session:</label>
+            <select id="session">
+                <option value="Spring-24">Spring-24</option>
+                <option value="Fall-24">Fall-24</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department:</label>
+            <select id="department">
+                <option value="CSE">CSE</option>
+                <option value="LAW">LAW</option>
+                <option value="BBA">BBA</option>
+                <option value="ENG">ENG</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="semester">Semester:</label>
+            <select id="semester">
+                <option value="1-1">1-1</option>
+                <option value="1-2">1-2</option>
+                <option value="2-1">2-1</option>
+                <option value="2-2">2-2</option>
+                <option value="3-1">3-1</option>
+                <option value="3-2">3-2</option>
+                <option value="4-1">4-1</option>
+                <option value="4-2">4-2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="numStudents">Number of Students:</label>
+            <input type="number" id="numStudents" min="1" max="55">
+        </div>
+
+        <div class="form-group">
+            <label for="numSubjects">Number of Subjects:</label>
+            <input type="number" id="numSubjects" min="4" max="10">
+        </div>
+
+        
+        <div id="subjectInputContainer"></div>
+        
+        <button id="generateButton" class="hidden">Generate Input Fields</button>
+    </div>
+
+    <div id="studentsInput" class="hidden"></div>
+    
+    <button id="calculateBtn" class="hidden">Get Result</button>
+
+    <div id="resultOutput" class="hidden">
+        <button id="printButton" class="hidden">Print Result Sheet</button>
+        <div id="resultContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
